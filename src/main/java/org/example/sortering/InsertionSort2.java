@@ -1,4 +1,4 @@
-package org.example;
+package org.example.sortering;
 
 public class InsertionSort2 {
     public static <T extends Comparable<? super T>> void insertionSort2(T[] a) {

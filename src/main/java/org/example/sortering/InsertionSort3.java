@@ -1,4 +1,4 @@
-package org.example;
+package org.example.sortering;
 
 public class InsertionSort3 {
 

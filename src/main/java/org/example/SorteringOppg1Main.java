@@ -5,8 +5,7 @@ import org.example.sortering.InsertionSort3;
 
 import java.util.Random;
 
-//Oppgave 1
-public class Main {
+public class SorteringOppg1Main {
     public static void main(String[] args) {
 
         Random tilfeldig = new Random();
