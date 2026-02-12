@@ -27,6 +27,9 @@ public class SorteringOppg2Main {
 
         // Test Merge Sort
         testSort("MERGE SORT", MergeSort::mergeSort, tabell_32, tabell_64, tabell_128);
+
+        //Test Quick Sort (insanely fast)
+        testSort("QUICK SORT", QuickSort::quickSort, tabell_32, tabell_64, tabell_128);
     }
 
     // Tester én sorteringsmetode
@@ -36,15 +39,20 @@ public class SorteringOppg2Main {
 
         double tid32 = maalTid(arr32, sortMetode);
         double c32 = tid32 / Math.pow(32000, 2);
-        System.out.println("32k:  " + tid32 + " sek, c = " + c32);
+        double cfn32 = Math.pow(32000, 2)*c32;
+        System.out.println("32k:  " + tid32 + " sek, c = " + c32 + ", c*f(n) = " + cfn32);
 
         double tid64 = maalTid(arr64, sortMetode);
         double c64 = tid64 / Math.pow(64000, 2);
-        System.out.println("64k:  " + tid64 + " sek, c = " + c64);
+        double cfn64 = Math.pow(64000, 2)*c64;
+
+        System.out.println("64k:  " + tid64 + " sek, c = " + c64 +  "c*f(n) = " + cfn64);
 
         double tid128 = maalTid(arr128, sortMetode);
         double c128 = tid128 / Math.pow(128000, 2);
-        System.out.println("128k: " + tid128 + " sek, c = " + c128);
+        double cfn128 = Math.pow(128000, 2)*c128;
+
+        System.out.println("128k: " + tid128 + " sek, c = " + c128 + "c*f(n) = " + cfn128);
 
         // Gjennomsnittlig c
         double gjennomsnittC = (tid32 + tid64 + tid128) / 3;
